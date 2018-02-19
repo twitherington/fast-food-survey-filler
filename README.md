@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Who doesn't like free food right?
+This app quickly fills out those surveys found on your fast food receipts
+ and gives you the validation code at the end of the survey. Enjoy!  🍔 🍗 🍟
 
-Things you may want to cover:
+To run, clone the repo and run 
+```
+./script/free_mcds.sh
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* made with the following versions
+ruby 2.2.2p95
+Rails 5.0.6
