@@ -1,10 +1,10 @@
-# README
-
-Who doesn't like free food right?
+### Who doesn't like free food right?
 This app quickly fills out those surveys found on your fast food receipts
  and gives you the validation code at the end of the survey. Enjoy!  🍔 🍗 🍟
 
-To run, clone the repo and run 
+To run, clone the repo and run the following:
+
+For McDonalds:
 ```
 ./script/free_mcds.sh
 ```
