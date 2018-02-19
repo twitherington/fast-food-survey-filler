@@ -4,12 +4,6 @@ end
 
 RSpec.describe do
   describe 'filling out the survey for McDonalds', :type => :feature do
-    before :each do
-      # prompt the user for the survey code printed on the receipt
-      # get_dashed_code 'McDonalds'
-      # code = gets.chomp
-      # puts code
-    end
 
     it 'fills out a survey with a satisfied response' do
       visit 'https://www.mcdvoice.com'

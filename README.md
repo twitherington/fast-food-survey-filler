@@ -9,6 +9,6 @@ For McDonalds:
 ./script/free_mcds.sh
 ```
 
-* made with the following versions
-ruby 2.2.2p95
+* made with the following versions:
+ruby 2.2.2p95, 
 Rails 5.0.6
