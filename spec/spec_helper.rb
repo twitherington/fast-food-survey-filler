@@ -1,6 +1,7 @@
 require 'selenium-webdriver'
 require 'capybara/rspec'
 require 'pry'
+require_relative 'support/survey_helper'
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
@@ -37,6 +38,7 @@ end
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.include SurveyHelper
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
