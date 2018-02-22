@@ -1,5 +1,6 @@
 require 'selenium-webdriver'
 require 'capybara/rspec'
+require 'byebug'
 require_relative 'support/survey_helper'
 
 Capybara.register_driver :chrome do |app|

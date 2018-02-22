@@ -16,6 +16,7 @@ RSpec.describe do
       choose_option_from_single_question
       choose_option_from_single_question
       fill_out_satisfied_single_question
+      choose_option_from_single_question
       single_yes_no_question_select_no
       single_yes_no_question_select_no
       choose_options_from_multi_question
