@@ -86,10 +86,14 @@ module SurveyHelper
   end
 
   def fill_in_email_address
-    email = ENV['EMAIL']
-    fill_in 'E-mail Address:', with: email
-    fill_in 'Confirm E-mail:', with: email
+    @email = ENV['EMAIL']
+    fill_in 'E-mail Address:', with: @email
+    fill_in 'Confirm E-mail:', with: @email
     next_question
+  end
+
+  def give_feedback_about_email
+    puts "You should see an offer code sent to #{@email} soon."
   end
 
   def get_dashed_code restaurant

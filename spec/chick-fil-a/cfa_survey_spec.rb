@@ -18,6 +18,7 @@ RSpec.describe do
       next_question
       single_yes_no_question_select_no
       fill_in_email_address
+      give_feedback_about_email
     end
   end
 
