@@ -1,6 +1,7 @@
 RSpec.describe do
   describe 'filling out the survey for Dairy Queen', :type => :feature do
     it 'fills out a survey with a satisfied response' do
+      validate_running_script_for 'dq'
       visit 'https://www.dqfansurvey.com'
       fill_in_dq_confirmation_number
       single_yes_no_question_select_yes

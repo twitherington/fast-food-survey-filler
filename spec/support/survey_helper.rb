@@ -1,10 +1,25 @@
 module SurveyHelper
+  def validate_running_script_for fast_food
+    if ENV['CODE'] == nil
+      puts '*** Please run the following command ***'
+      puts "./script/free_#{fast_food}.sh"
+      exit(false)
+    end
+  end
+
   def process_survey_confirmation
     if ENV['CODE'].gsub('-', '').scan(/\D/).empty?
       @confirmation_split = ENV['CODE'].chomp.split('-').to_a
     else
       puts '*** Please enter a valid survey confirmation ***'
       exit(false)
+    end
+  end
+
+  def process_email_address
+    valid_email_regex = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+    unless (ENV['EMAIL'] =~ valid_email_regex) != 0
+      puts '*** Please enter a valid email address ***'
     end
   end
 
@@ -68,6 +83,13 @@ module SurveyHelper
 
   def print_out_validation_code
     puts find("p[class='ValCode']").text + '   <- Please write this on your receipt, and enjoy your deal!'
+  end
+
+  def fill_in_email_address
+    email = ENV['EMAIL']
+    fill_in 'E-mail Address:', with: email
+    fill_in 'Confirm E-mail:', with: email
+    next_question
   end
 
   def get_dashed_code restaurant
