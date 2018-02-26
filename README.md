@@ -4,6 +4,11 @@ This app quickly fills out those surveys found on your fast food receipts
 
 To run, clone the repo and run the following:
 
+For Chick-Fil-A:
+```
+./script/free_cfa.sh
+```
+
 For McDonalds:
 ```
 ./script/free_mcds.sh
