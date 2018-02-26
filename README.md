@@ -6,17 +6,17 @@ To run, clone the repo and run the following:
 
 For Chick-Fil-A:
 ```
-./script/free_cfa.sh
+./free_cfa.sh
 ```
 
 For McDonalds:
 ```
-./script/free_mcds.sh
+./free_mcds.sh
 ```
 
 For Dairy Queen:
 ```
-./script/free_dq.sh
+./free_dq.sh
 ```
 
 made with the following versions:
