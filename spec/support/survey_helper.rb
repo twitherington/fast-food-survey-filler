@@ -2,7 +2,7 @@ module SurveyHelper
   def validate_running_script_for fast_food
     if ENV['CODE'] == nil
       puts '*** Please run the following command ***'
-      puts "./script/free_#{fast_food}.sh"
+      puts "./free_#{fast_food}.sh"
       exit(false)
     end
   end
@@ -24,42 +24,41 @@ module SurveyHelper
   end
 
   def choose_option_from_single_question
-    option = find('div.Opt2.rbloption > span.radioButtonHolder > span.radioBranded')
+    option = find('.Opt2 span.radioBranded')
     option.click
     next_question
   end
 
   def choose_options_from_multi_question
-    options = find_all('div.Opt2.rbloption > span.radioButtonHolder > span.radioBranded')
+    options = find_all('.Opt2 span.radioBranded')
     options.each do |opt| opt.click end
     next_question
   end
 
   def single_yes_no_question_select_no
-    find('td.Opt2.inputtyperbloption > span.radioBranded').click
+    find('.Opt2 span.radioBranded').click
     next_question
   end
 
   def single_yes_no_question_select_yes
-    find('td.Opt1.inputtyperbloption > span.radioBranded').click
+    find('.Opt1 span.radioBranded').click
     next_question
   end
 
   def fill_out_multi_yes_no_question_with_yes
-    yes_answers = find_all('td.Opt1.inputtyperbloption > span.radioBranded')
+    yes_answers = find_all('.Opt1 span.radioBranded')
     yes_answers.each do |yes| yes.click end
     next_question
   end
 
-
   def fill_out_satisfied_single_question
-    single = find('td.Opt5.inputtyperbloption > span.radioBranded')
+    single = find('.Opt2 span.radioBranded')
     single.click
     next_question
   end
 
   def fill_out_satisfied_multi_question
-    multi = find_all('td.Opt5.inputtyperbloption > span.radioBranded')
+    multi = find_all('.Opt5 span.radioBranded')
     multi.each do |hs| hs.click end
     next_question
   end

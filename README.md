@@ -23,3 +23,4 @@ made with the following versions:
 * ruby 2.2.2p95
 * Rails 5.0.6
 * Chrome 64.0.3282.167
+* [ChromeDriver 2.36](https://chromedriver.storage.googleapis.com/index.html?path=2.36/)

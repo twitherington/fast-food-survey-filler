@@ -8,6 +8,7 @@ RSpec.describe do
       fill_out_satisfied_single_question
       fill_out_satisfied_multi_question
       fill_out_satisfied_multi_question
+      fill_out_satisfied_multi_question
       single_yes_no_question_select_no
       fill_out_satisfied_multi_question
       fill_out_survey 'good visit. everything was correct'
@@ -17,8 +18,7 @@ RSpec.describe do
       choose_option_from_single_question
       choose_option_from_single_question
       fill_out_satisfied_single_question
-      # choose_option_from_single_question
-      single_yes_no_question_select_no
+      choose_option_from_single_question
       single_yes_no_question_select_no
       choose_options_from_multi_question
       fill_out_satisfied_single_question
