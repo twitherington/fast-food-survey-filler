@@ -17,9 +17,10 @@ module SurveyHelper
   end
 
   def process_email_address
-    valid_email_regex = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-    unless (ENV['EMAIL'] =~ valid_email_regex) != 0
+    valid = '[A-Za-z\d.+-]+'
+    unless (ENV['EMAIL'] =~ /#{valid}@#{valid}\.#{valid}/) == 0
       puts '*** Please enter a valid email address ***'
+      exit(false)
     end
   end
 
