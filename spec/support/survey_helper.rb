@@ -24,44 +24,24 @@ module SurveyHelper
     end
   end
 
-  def choose_option_from_single_question
-    option = find('.Opt2 span.radioBranded')
-    option.click
-    next_question
+  def choose_one_or_more_options
+    if page.has_content?('Please write the following validation code on your receipt.')
+      print_out_validation_code
+    elsif page.has_css?('.Opt2')
+      options = find_all('.Opt2 span.radioBranded')
+      options.each do |opt| opt.click end
+      next_question
+    end
   end
 
-  def choose_options_from_multi_question
-    options = find_all('.Opt2 span.radioBranded')
-    options.each do |opt| opt.click end
-    next_question
-  end
-
-  def single_yes_no_question_select_no
-    find('.Opt2 span.radioBranded').click
-    next_question
-  end
-
-  def single_yes_no_question_select_yes
-    find('.Opt1 span.radioBranded').click
-    next_question
-  end
-
-  def fill_out_multi_yes_no_question_with_yes
-    yes_answers = find_all('.Opt1 span.radioBranded')
-    yes_answers.each do |yes| yes.click end
-    next_question
-  end
-
-  def fill_out_satisfied_single_question
-    single = find('.Opt2 span.radioBranded')
-    single.click
-    next_question
-  end
-
-  def fill_out_satisfied_multi_question
-    multi = find_all('.Opt5 span.radioBranded')
-    multi.each do |hs| hs.click end
-    next_question
+  def fill_out_one_or_more_satisfied_questions
+    if page.has_content?('Please write the following validation code on your receipt.')
+      print_out_validation_code
+    elsif page.has_css?('.Opt5')
+      questions = find_all('.Opt5 span.radioBranded')
+      questions.each do |hs| hs.click end
+      next_question
+    end
   end
 
   def fill_out_survey comment

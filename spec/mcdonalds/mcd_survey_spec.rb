@@ -4,24 +4,23 @@ RSpec.describe do
       validate_running_script_for 'mcds'
       visit 'https://www.mcdvoice.com'
       fill_in_mcd_confirmation_number
-      choose_option_from_single_question
-      fill_out_satisfied_single_question
-      fill_out_satisfied_multi_question
-      fill_out_satisfied_multi_question
-      fill_out_satisfied_multi_question
-      single_yes_no_question_select_no
-      fill_out_satisfied_multi_question
+      choose_one_or_more_options
+      fill_out_one_or_more_satisfied_questions
+      fill_out_one_or_more_satisfied_questions
+      fill_out_one_or_more_satisfied_questions
+      fill_out_one_or_more_satisfied_questions
+      choose_one_or_more_options
+      fill_out_one_or_more_satisfied_questions
       fill_out_survey 'good visit. everything was correct'
-      fill_out_multi_yes_no_question_with_yes
-      choose_option_from_single_question
-      fill_out_multi_yes_no_question_with_yes
-      choose_option_from_single_question
-      choose_option_from_single_question
-      fill_out_satisfied_single_question
-      choose_option_from_single_question
-      single_yes_no_question_select_no
-      choose_options_from_multi_question
-      fill_out_satisfied_single_question
+      fill_out_one_or_more_satisfied_questions
+      choose_one_or_more_options
+      choose_one_or_more_options
+      fill_out_one_or_more_satisfied_questions
+      choose_one_or_more_options
+      choose_one_or_more_options
+      fill_out_one_or_more_satisfied_questions
+      choose_one_or_more_options
+      choose_one_or_more_options
       next_question
       print_out_validation_code
     end
