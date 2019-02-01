@@ -11,17 +11,13 @@ RSpec.describe do
       fill_out_one_or_more_satisfied_questions
       choose_one_or_more_options
       fill_out_one_or_more_satisfied_questions
-      fill_out_survey 'good visit. everything was correct'
-      fill_out_one_or_more_satisfied_questions
-      choose_one_or_more_options
-      choose_one_or_more_options
-      fill_out_one_or_more_satisfied_questions
-      choose_one_or_more_options
-      choose_one_or_more_options
-      fill_out_one_or_more_satisfied_questions
-      choose_one_or_more_options
-      choose_one_or_more_options
       next_question
+      choose_one_or_more_options
+      fill_out_one_or_more_satisfied_questions
+      next_question
+      choose_one_or_more_options
+      choose_one_or_more_options
+      choose_one_or_more_options
       print_out_validation_code
     end
   end
