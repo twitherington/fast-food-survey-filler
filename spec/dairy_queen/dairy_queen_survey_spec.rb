@@ -5,20 +5,21 @@ RSpec.describe do
       visit 'https://www.dqfansurvey.com'
       fill_in_dq_confirmation_number
       expired_dq_survey
-      single_yes_no_question_select_yes
-      fill_out_satisfied_single_question
-      choose_option_from_single_question
+      choose_option_1
+      choose_option_5
+      choose_option_1
       next_question
-      fill_out_satisfied_multi_question
-      fill_out_satisfied_multi_question
-      single_yes_no_question_select_no
-      fill_out_satisfied_multi_question
-      fill_out_survey 'good visit. everything was correct'
-      fill_out_multi_yes_no_question_with_yes
-      fill_out_satisfied_single_question
-      choose_option_from_single_question
-      choose_option_from_single_question
-      choose_option_from_single_question
+      choose_option_5
+      choose_option_5
+      choose_option_2
+      choose_option_5
+      next_question
+      choose_option_1
+      choose_option_2
+      choose_option_1
+      choose_option_2
+      choose_option_1
+      choose_option_2
       fill_out_classification_survey
       print_out_validation_code
     end

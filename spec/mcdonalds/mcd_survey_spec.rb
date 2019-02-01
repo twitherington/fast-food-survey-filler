@@ -4,20 +4,20 @@ RSpec.describe do
       validate_running_script_for 'mcds'
       visit 'https://www.mcdvoice.com'
       fill_in_mcd_confirmation_number
-      choose_one_or_more_options
-      fill_out_one_or_more_satisfied_questions
-      fill_out_one_or_more_satisfied_questions
-      fill_out_one_or_more_satisfied_questions
-      fill_out_one_or_more_satisfied_questions
-      choose_one_or_more_options
-      fill_out_one_or_more_satisfied_questions
+      choose_option_2
+      choose_option_5
+      choose_option_5
+      choose_option_5
+      choose_option_5
+      choose_option_2
+      choose_option_5
       next_question
-      choose_one_or_more_options
-      fill_out_one_or_more_satisfied_questions
+      choose_option_2
+      choose_option_5
       next_question
-      choose_one_or_more_options
-      choose_one_or_more_options
-      choose_one_or_more_options
+      choose_option_2
+      choose_option_2
+      choose_option_2
       print_out_validation_code
     end
   end

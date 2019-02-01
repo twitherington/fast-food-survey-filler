@@ -24,7 +24,17 @@ module SurveyHelper
     end
   end
 
-  def choose_one_or_more_options
+  def choose_option_1
+    if page.has_content?('Please write the following validation code on your receipt.')
+      print_out_validation_code
+    elsif page.has_css?('.Opt1')
+      options = find_all('.Opt1 span.radioBranded')
+      options.each do |opt| opt.click end
+      next_question
+    end
+  end
+
+  def choose_option_2
     if page.has_content?('Please write the following validation code on your receipt.')
       print_out_validation_code
     elsif page.has_css?('.Opt2')
@@ -34,7 +44,7 @@ module SurveyHelper
     end
   end
 
-  def fill_out_one_or_more_satisfied_questions
+  def choose_option_5
     if page.has_content?('Please write the following validation code on your receipt.')
       print_out_validation_code
     elsif page.has_css?('.Opt5')
@@ -56,8 +66,6 @@ module SurveyHelper
   def fill_out_classification_survey
     select('Prefer not to answer', from: 'Please indicate your gender:')
     select('Prefer not to answer', from: 'Please indicate your age:')
-    select('Prefer not to answer', from: 'Please indicate your annual household income:')
-    select('Prefer not to answer', from: 'Please indicate which of the following best describes your background:')
     next_question
   end
 
